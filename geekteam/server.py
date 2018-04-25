@@ -20,10 +20,10 @@ def result():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-#    file = request.files['image']
- #   f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+    file = request.files['image']
+    f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
 
-  #  file.save(f)
+    file.save(f)
     return render_template("index.html", final_text = "test")
 
 
